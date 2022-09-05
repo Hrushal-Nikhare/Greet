@@ -5,53 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Teachers Day</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body>
-<form onsubmit="GetData()"">
+<form action="/result.html">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname">
     <br>
     <label for="Des">Sir/Ma'am:</label><br>
-    <input type="radio" id="Ma" name="Des" value="HTML">
+    <input type="radio" id="Ma" name="Des" value="Ma'am">
     <label for="Ma">Ma'am</label><br>
     <input type="radio" id="Sir" name="Des" value="Sir">
     <label for="Sir">Sir</label><br>
     <label for="Subject">Subject:</label>
     <select name="Subject" id="Subject">
-    <option value="Hin">Hindi</option>
-    <option value="Sci">Science</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Science">Science</option>
     <option value="Math">Math</option>
     <option value="AI">Ai</option>
     <option value="FMM">FMM</option>
-    <option value="Eng">English</option>
-    <option value="Geo">Geography/Economics</option>
-    <option value="His">History/Civics</option>
+    <option value="English">English</option>
+    <option value="Geography">Geography/Economics</option>
+    <option value="History">History/Civics</option>
     </select><br>
     <input type="submit" value="Submit">
 </form>
-<script>
-
-localStorage.clear();
-// Get Data from the form and store it in Local Storage
-function GetData(){
-    var ele = document.getElementsByName('gender');
-    for(i = 0; i < ele.length; i++) {
-        if(ele[i].checked)
-        var Des = ele[i].value;
-    }
-    const fname = document.querySelector('fname')
-    var e = document.getElementById("Subject");
-    var value = e.value;
-    var text = e.options[e.selectedIndex].text;
-    console.log(text)
-    console.log(fname)
-    console.log(Des)
-    localStorage.setItem('fname',fname);
-    localStorage.setItem('Des',Des)
-    localStorage.setItem('Sub',text)
-}
-</script>
 </body>
 </html>
