@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Teachers Day></title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <style>
-              body{
-        background-color: rgba(241, 219, 18, 0.333);
-      }
-        h1{
-            color: #000000;
-text-shadow: 4px -4px 8px #a8a8a8,
--4px 4px 8px #ffffff;
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Teachers Day></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <style>
+        body {
+        min-height: 100vh;
+        font-family: "Inter", Arial, sans-serif;
+        color: rgb(255, 255, 255);
+        background: #011C27;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
         }
-    </style>
+        </style>
+    <script defer="defer" src="confetti.js"></script>
 </head>
+
 <body>
-    <h1>Thank you <span id="Name"></span> <span id="des"></span> For all that you have done for us! You have had troubles teaching your class <span id="Sub"></span> By still Never gave up</h1>
+    <main>
+    <h1>
+        Thank you <span id="Name"></span> <span id="des"></span> For all that you
+        have done for us! You have had troubles teaching your class
+        <span id="Sub"></span> By still Never gave up
+    </h1>
+    <br><br><br>
+    <button class="button" id="button"> More Confetti! </button></main>
     <script>
         const urlParams = new URLSearchParams(window.location.href);
-        var finame = urlParams.get('Fname');
-        var des = urlParams.get('Des');
-        var Sub = urlParams.get('Subject');
-        document.getElementById('Name').innerHTML = finame;
-        document.getElementById('des').innerHTML = des;
-        document.getElementById('Sub').innerHTML = Sub;
+        var finame = urlParams.get("Fname");
+        var des = urlParams.get("Des");
+        var Sub = urlParams.get("Subject");
+        document.getElementById("Name").innerHTML = finame;
+        document.getElementById("des").innerHTML = des;
+        document.getElementById("Sub").innerHTML = Sub;
     </script>
 </body>
+
 </html>
